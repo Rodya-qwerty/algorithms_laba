@@ -21,12 +21,12 @@ def check_brackets(string):
     return len(stack) == 0
 
 
-def check_multiple_strings(strings):
+def check_strings(strings):
     for s in strings:
         result = check_brackets(s)
         print(f"{s} -> {result}")
 
 
 if __name__ == "__main__":
-    test_strings = ["()", "([)]", "{[]}", ')[]{}', "([{}])", "((())"]
-    check_multiple_strings(test_strings)
+    strings = ["()", "([)]", "{[]}", ')[]{}', "([{}])", "((())"]
+    check_strings(strings)
