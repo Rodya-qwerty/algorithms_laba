@@ -1,4 +1,4 @@
-def check_brackets(string):
+def check_brackets(string, typ):
     stack = []
     
     brackets_map = {
@@ -7,11 +7,14 @@ def check_brackets(string):
         '}': '{'
     }
     
+    count = 0
     for char in string:
+        if typ == char: count+=1
         if char in '([{':
             stack.append(char)
         
         elif char in ')]}':
+             if typ == char: count+=1
             if len(stack) == 0:
                 return False
             
