@@ -7,3 +7,16 @@
  - получение балла по имени или id
  - вывод всех студентов и их результатов
  - Хранить не один балл, а список оценок по нескольким работам '''
+
+from table import *
+
+if __name__ == "__main__":
+
+    journal = Journal()
+    pas = journal.login_teacher()
+    while (pas != 'stop'):
+        if pas:
+            journal.menu()
+        else:
+            pas = journal.login_teacher()
+
